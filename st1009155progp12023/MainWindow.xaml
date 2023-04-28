@@ -1,0 +1,30 @@
+﻿<Window x:Class="st1009155progp12023.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:st1009155progp12023"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <TextBox x:Name="codeTextBox" Width="100" Margin="5" Text="PROG6212"/>
+            <TextBox x:Name="nameTextBox" Width="200" Margin="5" Text="Programming 2B"/>
+            <TextBox x:Name="creditsTextBox" Width="50" Margin="5" Text="15"/>
+            <TextBox x:Name="classHoursTextBox" Width="50" Margin="5" Text="5"/>
+            <Button x:Name="addButton" Content="Add" Margin="5" Click="AddButton_Click"/>
+        </StackPanel>
+        <DataGrid x:Name="moduleDataGrid" Grid.Row="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Code" Binding="{Binding Code}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Credits" Binding="{Binding Credits}"/>
+                <DataGridTextColumn Header="Class Hours per Week" Binding="{Binding ClassHoursPerWeek}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
